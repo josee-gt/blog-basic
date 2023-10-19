@@ -9,11 +9,6 @@
 	--bg-100: #1e1e1e;
 	--bg-200: #2d2d2d;
 	--bg-300: #454545;
-	/*
-    Light 300
-    Regular 400
-    Medium 500
-    */
 }
 
 * {
@@ -28,14 +23,6 @@ html {
 	box-sizing: border-box;
 }
 body {
-	/*margin: 0;
-	padding: 0;
- 
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0; */
 	background-color: var(--bg-100);
 }
 
@@ -53,7 +40,6 @@ header {
 	height: 140px;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
-	/* border: 1px solid red; */
 }
 
 header .social-networks {
@@ -154,7 +140,7 @@ main .main-backgroun-img {
 	display: grid;
 	align-content: start;
 	height: auto;
-	/* border: 1px solid rgb(0, 255, 47); */
+	width: 100%;
 }
 .blogs-main .main-new {
 	background-color: var(--bg-300);
@@ -162,7 +148,6 @@ main .main-backgroun-img {
 	padding: 0 50px 40px;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 2fr;
-	/* grid-template-areas: "figure resume"; */
 }
 
 .main-new .main-new__img-portada {
@@ -313,11 +298,6 @@ div .blog__btn {
 	padding: 8px 0 8px 0;
 }
 
-@media screen and (max-width: 760px) {
-	.container-contact-me {
-		flex-direction: column;
-	}
-}
 .container-contact-me > div {
 	width: 250px;
 	height: auto;
@@ -354,15 +334,10 @@ div .blog__btn {
 	justify-content: center;
 }
 
-@media screen and (max-width: 760px) {
-	.main-profile__me {
-		flex-direction: column;
-	}
-}
 .main-profile__me figure {
-	width: 450px;
+	width: 300px;
 	height: 300px;
-	border-radius: 100%;
+
 	margin: 16px auto;
 	overflow: hidden;
 	/* border: 1px solid red; */
@@ -381,6 +356,8 @@ div .blog__btn {
 }
 .main-profile__me p {
 	/* border: 1px solid red; */
+	display: inline-flex;
+	width: 50%;
 	text-align: left;
 	color: var(--text-200);
 	font-size: 1.5rem;
@@ -405,23 +382,23 @@ div .blog__btn {
 .main-profile__my-proyects .container-proyects {
 	margin-top: 16px;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
 	gap: 16px;
+	place-content: center;
 }
 
 .container-proyects .card-proyect {
 	width: 100%;
 	height: 320px;
-	padding: 4px 4px;
-	text-align: left;
+	padding: 12px 12px;
+	text-align: center;
 	border: 1px solid var(--accent-200);
 	border-radius: 4px;
 }
 
 .card-proyect img {
-	width: 100%;
+	width: 80%;
 	height: 180px;
-	margin-top: 8px;
 	border-radius: 4px;
 }
 
@@ -433,6 +410,7 @@ div .blog__btn {
 .card-proyect p {
 	font-size: 1.4rem;
 	color: var(--text-200);
+	text-align: justify;
 }
 footer {
 	width: 100%;
